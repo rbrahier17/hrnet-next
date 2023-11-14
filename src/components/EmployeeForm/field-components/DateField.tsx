@@ -43,7 +43,7 @@ export function DateField({ control, name, title }: DateFieldProps) {
         <FormItem className='flex flex-col'>
           <FormLabel>{title}</FormLabel>
 
-          {/* Popover for a date picker */}
+          {/* Popover for date picker */}
           <Popover>
             <PopoverTrigger asChild>
               <Button

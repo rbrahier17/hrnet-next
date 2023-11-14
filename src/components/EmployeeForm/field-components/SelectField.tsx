@@ -8,7 +8,15 @@ import { Control } from "react-hook-form";
 // Import components
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/shadcn-ui/form";
 import { ScrollArea } from "@/components/shadcn-ui/scroll-area";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/shadcn-ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/shadcn-ui/select";
 
 interface SelectFieldProps {
   control: Control<any>;
@@ -35,7 +43,6 @@ export function SelectField({ control, name, title, options }: SelectFieldProps)
       name={name}
       render={({ field }) => (
         <FormItem>
-          <FormLabel>{title}</FormLabel>
           <Select onValueChange={field.onChange} defaultValue={field.value}>
             <FormControl>
               <SelectTrigger>
@@ -43,21 +50,24 @@ export function SelectField({ control, name, title, options }: SelectFieldProps)
               </SelectTrigger>
             </FormControl>
             <SelectContent>
-              {options.length > 8 ? (
-                <ScrollArea className='h-64'>
-                  {options.map((option) => (
+              <SelectGroup>
+                <SelectLabel>{title} </SelectLabel>
+                {options.length > 8 ? (
+                  <ScrollArea className='h-64'>
+                    {options.map((option) => (
+                      <SelectItem key={option.value} value={option.value}>
+                        {option.label}
+                      </SelectItem>
+                    ))}
+                  </ScrollArea>
+                ) : (
+                  options.map((option) => (
                     <SelectItem key={option.value} value={option.value}>
                       {option.label}
                     </SelectItem>
-                  ))}
-                </ScrollArea>
-              ) : (
-                options.map((option) => (
-                  <SelectItem key={option.value} value={option.value}>
-                    {option.label}
-                  </SelectItem>
-                ))
-              )}
+                  ))
+                )}
+              </SelectGroup>
             </SelectContent>
           </Select>
           <FormMessage />
