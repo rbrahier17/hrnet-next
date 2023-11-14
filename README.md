@@ -4,14 +4,26 @@ Note: This project was developed as part of the JS/React Application Developer t
 
 ## Introduction 
 
-HRnet is an internal web application developed by WealthHealth company, designed for employee record management. This is a redesign of the old application that previously utilized jQuery.
+HRnet is an internal web application developed by WealthHealth company, designed for employee record management. This project is a redesign of the old application that previously used jQuery.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Components 
+## Components
 
 The objective was to convert the old jQuery plugins into more efficient and less bug-prone React components.
 At this stage, only the component for displaying data tables has been fully developed in-house ([react-data-tables-plugin](https://github.com/rbrahier17/react-data-tables-plugin)), while the other components are sourced from the [shadcn/ui](https://ui.shadcn.com/) library, which provides a collection of modern, customizable, and open-source React components.
+
+## Features
+
+The HRnet application integrates two main pages:
+
+### Homepage
+
+The homepage displays a form for adding a new employee to the database. Users can fill in the necessary information and submit the form.
+
+### 'Employee-list' Page
+
+The 'employee-list' page allows users to view the complete list of added employees.
 
 ## Getting Started
 
