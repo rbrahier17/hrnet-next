@@ -17,6 +17,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/shadcn-ui/select";
+import { useEffect } from "react";
 
 interface SelectFieldProps {
   control: Control<any>;
@@ -37,16 +38,17 @@ interface SelectFieldProps {
  * @returns The rendered SelectField component.
  */
 export function SelectField({ control, name, title, options }: SelectFieldProps) {
+
   return (
     <FormField
       control={control}
       name={name}
       render={({ field }) => (
         <FormItem>
-          <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <Select onValueChange={field.onChange} defaultValue={field.value || ""}>
             <FormControl>
               <SelectTrigger>
-                <SelectValue placeholder={`Select a ${title}`} />
+                <SelectValue placeholder={field.value || `Select a ${title}`} />
               </SelectTrigger>
             </FormControl>
             <SelectContent>

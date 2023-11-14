@@ -5,7 +5,7 @@
 "use client";
 
 // Hooks
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useFormDataContext } from "@/contexts/FormDataContext";
 
@@ -21,6 +21,7 @@ import { DateField } from "./field-components/DateField";
 import { SelectField } from "./field-components/SelectField";
 import { Button } from "@/components/shadcn-ui/button";
 import { ConfirmationDialog } from "./ConfirmationDialog";
+import RandomDataButton from "./RandomDataButton";
 
 // Data for select inputs
 import { states } from "@/data/states";
@@ -42,6 +43,7 @@ export default function EmployeeForm() {
 
   // State for controlling the visibility of the confirmation dialog
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+
 
   // React Hook Form setup
   const form = useForm<z.infer<typeof zodFormSchema>>({
@@ -125,6 +127,8 @@ export default function EmployeeForm() {
             Submit
           </Button>
         </form>
+        {/* FOR TESTING PURPOSES: BUTTON TO AUTOMATICALLY FILL THE FORM WITH RANDOM DATA */}
+        <RandomDataButton form={form} />
       </Form>
 
       {/* Confirmation Dialog Component */}
