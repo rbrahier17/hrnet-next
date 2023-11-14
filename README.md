@@ -17,13 +17,13 @@ At this stage, only the component for displaying data tables has been fully deve
 
 The HRnet application integrates two main pages:
 
-### Homepage
+### Home Page
 
-The homepage displays a form for adding a new employee to the database. Users can fill in the necessary information and submit the form.
+The homepage displays a form for adding a new employee to the employee list. Users can fill in the necessary information and submit the form.
 
-### 'Employee-list' Page
+### Employee List Page
 
-The 'employee-list' page allows users to view the complete list of added employees.
+The `/employee-list` page allows users to view and interact with the complete list of added employees through a data table.
 
 ## Getting Started
 
