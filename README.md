@@ -1,8 +1,32 @@
+# hrnet-next
+
+Note: This project was developed as part of the JS/React Application Developer training program at OpenClassrooms.
+
+## Introduction 
+
+HRnet is an internal web application developed by WealthHealth company, designed for employee record management. This is a redesign of the old application that previously utilized jQuery.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Components 
+
+The objective was to convert the old jQuery plugins into more efficient and less bug-prone React components.
+At this stage, only the component for displaying data tables has been fully developed in-house ([react-data-tables-plugin](https://github.com/rbrahier17/react-data-tables-plugin)), while the other components are sourced from the [shadcn/ui](https://ui.shadcn.com/) library, which provides a collection of modern, customizable, and open-source React components.
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -16,11 +40,9 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Learn More about Next.js
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -29,8 +51,4 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
