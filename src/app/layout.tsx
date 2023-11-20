@@ -16,14 +16,14 @@ const inter = Inter({ subsets: ["latin"], display: "swap", adjustFontFallback: f
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body
-        className={`${inter.className} container w-screen overflow-x-hidden flex flex-col h-screen justify-between`}
-      >
-        <div>
-          <Header />
-          <FormDataContextProvider>{children}</FormDataContextProvider>
+      <body>
+        <div className={`${inter.className} container w-screen flex flex-col h-screen justify-between`}>
+          <div>
+            <Header />
+            <FormDataContextProvider>{children}</FormDataContextProvider>
+          </div>
+          <Footer />
         </div>
-        <Footer />
       </body>
     </html>
   );
